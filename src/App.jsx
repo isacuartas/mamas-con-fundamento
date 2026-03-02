@@ -204,6 +204,23 @@ function App() {
           </div>
         </main>
       )}
+
+      {/* Footer / Derechos de Autor */}
+      <footer style={{
+        marginTop: '40px',
+        padding: '20px',
+        textAlign: 'center',
+        borderTop: '1px solid var(--color-border)',
+        fontSize: '0.9em',
+        color: 'var(--color-text-muted)'
+      }}>
+        <p style={{ margin: '5px 0' }}>
+          © {new Date().getFullYear()} <strong>Nutrición con Fundamento</strong>. Todos los derechos reservados.
+        </p>
+        <p style={{ margin: '5px 0' }}>
+          Creado y Diseñado por <strong>Isabela Cuartas</strong>
+        </p>
+      </footer>
     </div>
   );
 }
