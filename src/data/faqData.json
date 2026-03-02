@@ -1,0 +1,37 @@
+[
+    {
+        "id": "faq_cafe",
+        "pregunta": "¿Puedo tomar café durante el embarazo? ☕",
+        "respuesta": "Sí, pero con equilibrio. El límite seguro son 200 mg de cafeína al día (aprox. una taza de 8 oz).",
+        "fundamento": "La cafeína atraviesa la placenta y al bebé le toma más tiempo procesarla. Además, los taninos del café pueden bloquear la absorción del hierro si se toma junto con las comidas.",
+        "tip_pro": "¡Tómate tu cafecito una hora después de las comidas para no interferir con tu nutrición!"
+    },
+    {
+        "id": "faq_dulce",
+        "pregunta": "¿Por qué tengo tantas ganas de comer dulce en la tarde? 🍫",
+        "respuesta": "No es falta de voluntad, ¡es tu cuerpo pidiendo energía rápida!",
+        "fundamento": "A medida que el bebé crece, tus niveles de azúcar pueden fluctuar. Si el almuerzo no tuvo suficiente fibra o proteína, el 'bajón' de la tarde disparará la ansiedad por dulce.",
+        "tip_pro": "Combina una fruta con una proteína (ej. manzana con nueces). La proteína frena la velocidad del azúcar y calma el antojo."
+    },
+    {
+        "id": "faq_comer_por_dos",
+        "pregunta": "¿Es verdad que debo 'comer por dos'? 🍽️",
+        "respuesta": "¡Mito total! Lo que debes es 'nutrir al doble', no comer el doble.",
+        "fundamento": "En el 2do y 3er trimestre solo necesitas entre 340 y 450 calorías adicionales (equivalente a un sándwich de aguacate o un tazón de avena), no una ración doble de comida.",
+        "tip_pro": "Enfócate en la densidad nutricional: menos paquetes y más alimentos que vengan de la tierra."
+    },
+    {
+        "id": "faq_hinchazon",
+        "pregunta": "¿Por qué se me hinchan tanto los pies y tobillos? 👣",
+        "respuesta": "Se llama edema gestacional y es muy común en esta etapa.",
+        "fundamento": "Tienes un 50% más de sangre y líquidos circulando, y el útero presiona las venas que devuelven la sangre desde las piernas.",
+        "tip_pro": "No dejes de tomar agua (la deshidratación empeora la hinchazón) y pon los pies en alto 20 minutos al día."
+    },
+    {
+        "id": "faq_acidez",
+        "pregunta": "¿Tengo mucha acidez porque el bebé tiene mucho pelo? 👶",
+        "respuesta": "¡Mito falso! El pelo del bebé no causa acidez.",
+        "fundamento": "La progesterona relaja la válvula del estómago y el tamaño del bebé presiona todo hacia arriba, facilitando el reflujo.",
+        "tip_pro": "No te acuestes inmediatamente después de comer y prefiere porciones pequeñas 5 veces al día."
+    }
+]

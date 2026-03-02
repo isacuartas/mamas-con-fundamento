@@ -1,0 +1,31 @@
+{
+    "statusMessages": {
+        "BAJO_PESO": {
+            "title": "¡Necesitamos un poquito más de energía! ✨",
+            "body": "Tu ganancia de peso está por debajo de lo recomendado. No te preocupes, solo significa que tu cuerpo necesita un 'extra' de amor y nutrientes para que tu bebé crezca fuerte.",
+            "tip": "Suma 'grasas buenas' como palta, nueces o aceite de oliva. ¡Pequeños bocados con mucha nutrición!"
+        },
+        "NORMAL": {
+            "title": "¡Vas por excelente camino, mamá! 🌟",
+            "body": "Tu ganancia de peso está en el rango ideal. Le estás dando a tu bebé el espacio justo para crecer sin sobrecargar tu cuerpo. ¡Eres una campeona!",
+            "tip": "No olvides tus menestras con limonada para absorber todo el hierro vegetal."
+        },
+        "SOBREPESO": {
+            "title": "¡Vamos a equilibrar un poco la balanza! 🍎",
+            "body": "Estás ganando peso un poco más rápido de lo ideal. No es comer menos, sino elegir mejor para evitar sentirte muy pesada o cansada.",
+            "tip": "Cambia los jugos por fruta entera y prefiere cereales integrales. ¡Te darán energía por más tiempo!"
+        },
+        "OBESIDAD": {
+            "title": "Cuidémonos juntas con pasos estratégicos 👣",
+            "body": "Tu cuerpo está haciendo un gran esfuerzo. Mantener tu ganancia entre 5 y 9 kg en total es clave para un parto tranquilo y sin complicaciones.",
+            "tip": "Una caminata suave y muchas verduras de colores en tu plato serán tus mejores aliadas."
+        }
+    },
+    "alerts": {
+        "TALLA_BAJA": "🌸 Al medir menos de 1.45m, tu seguimiento debe ser más cercano. ¡No faltes a tus controles!",
+        "GANANCIA_BRUSCA": "⚠️ ¡Ojo! Has ganado peso muy rápido esta semana. Coméntalo con tu médico para descartar retención de líquidos o presión alta.",
+        "ZONA_FELICITACION": "¡Ritmo impecable! ✨ Tu cuerpo y tu bebé están en total sincronía. Mantenerte en esta zona de equilibrio es el mejor fundamento para un desarrollo saludable. ¡Sigue disfrutando de tu comida real y nutritiva!",
+        "ZONA_MEJORA": "¡Ajustemos el paso! 🍎 Notamos que el ritmo de ganancia se aceleró un poco. No te preocupes, es el momento ideal para retomar el equilibrio: prioriza los vegetales, elige frutas enteras y mantente activa con tus caminatas. ¡Tú tienes el control!",
+        "ZONA_ESTABILIDAD": "¡Gran gestión de tu ganancia! 👏 Aunque sigues en una zona de cuidado, has demostrado un control excelente esta semana. Mantener la estabilidad es clave para proteger tu salud y la de tu bebé. ¡Ese es el verdadero fundamento!"
+    }
+}

@@ -1,0 +1,96 @@
+:root {
+  /* Branding Colors "Mamás con Fundamento" */
+  --color-primary: #6A5ACD;
+  /* Morado Fundamento */
+  --color-primary-hover: #5A4ABF;
+  --color-success: #8BC34A;
+  /* Verde Brote */
+  --color-bg-lavender: #F4F0FF;
+  /* Fondo general morado pastel suave que permite leer bien */
+  --color-bg-main: #f0e6fa;
+  --color-text-main: #333333;
+  --color-text-muted: #666666;
+  --radius-app: 12px;
+  --shadow-app: 0 4px 15px rgba(106, 90, 205, 0.08);
+
+  font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start;
+  /* Cambio a flex-start para scroll natural app */
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+button {
+  border-radius: var(--radius-app);
+  border: 1px solid transparent;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(106, 90, 205, 0.2);
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 4px 8px rgba(106, 90, 205, 0.4);
+  transform: translateY(-1px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto rgba(106, 90, 205, 0.4);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}

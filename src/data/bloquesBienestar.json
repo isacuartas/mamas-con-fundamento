@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "rangoStr": "Semanas 1-4",
+        "titulo": "El Gran Comienzo",
+        "importante": "¡Ácido Fólico! Es el arquitecto del sistema nervioso.",
+        "meta": "Come muchas hojas verdes (espinaca, acelga) y mantente hidratada. Tu cuerpo está empezando una maratón de 40 semanas."
+    },
+    {
+        "id": 2,
+        "rangoStr": "Semanas 5-8",
+        "titulo": "Corazón y Calma",
+        "importante": "Manejo de náuseas y formación de órganos.",
+        "meta": "Si tienes mareos, come galletas integrales o jengibre. El bebé ya tiene latidos, así que evita procesados y prefiere comida real."
+    },
+    {
+        "id": 3,
+        "rangoStr": "Semanas 9-12",
+        "titulo": "Terminando el Primer Acto",
+        "importante": "Energía y Hierro.",
+        "meta": "Tu volumen de sangre sube. Come granos (frijoles, lentejas) con limón. ¡Vitamina C + Hierro es la clave para no sentirte agotada!"
+    },
+    {
+        "id": 4,
+        "rangoStr": "Semanas 13-16",
+        "titulo": "La Época Dorada",
+        "importante": "Desarrollo cerebral (Grasas buenas).",
+        "meta": "El aguacate y las nueces son 'gasolina' para el cerebro de tu bebé. Cambia los jugos por fruta entera para cuidar tu azúcar."
+    },
+    {
+        "id": 5,
+        "rangoStr": "Semanas 17-20",
+        "titulo": "Sentidos y Movimiento",
+        "importante": "Calcio y Potasio.",
+        "meta": "El bebé ya escucha y se mueve. Fortalece sus huesos con lácteos, ajonjolí o almendras. Si te dan calambres, el banano es tu mejor aliado."
+    },
+    {
+        "id": 6,
+        "rangoStr": "Semanas 21-24",
+        "titulo": "El Control del Dulce",
+        "importante": "Fibra y Glucosa.",
+        "meta": "Es el momento de la prueba de azúcar. Elige carbohidratos complejos (avena, arroz integral, arepa de maíz peto) para mantener la energía estable."
+    },
+    {
+        "id": 7,
+        "rangoStr": "Semanas 25-28",
+        "titulo": "El Estirón",
+        "importante": "Hidratación y porciones pequeñas.",
+        "meta": "El bebé crece rápido y empuja tu estómago. Si tienes acidez, come 5 veces al día en porciones pequeñas. Bebe mucha agua para renovar el líquido amniótico."
+    },
+    {
+        "id": 8,
+        "rangoStr": "Semanas 29-32",
+        "titulo": "Cerebro y Pulmones",
+        "importante": "Omega-3 y Vitamina C.",
+        "meta": "El cerebro del bebé se vuelve complejo. Las semillas de chía y linaza son oro puro. Sigue con la guayaba para que tus defensas estén al 100%."
+    },
+    {
+        "id": 9,
+        "rangoStr": "Semanas 33-36",
+        "titulo": "Comodidad y Espacio",
+        "importante": "Fibra para la pesadez.",
+        "meta": "Hay poco espacio. Prefiere comidas ligeras como pollo o pescado con muchas verduras. La papaya y la avena te ayudarán si te sientes estreñida."
+    },
+    {
+        "id": 10,
+        "rangoStr": "Semanas 37-40",
+        "titulo": "La Recta Final",
+        "importante": "Hierro final y Calma.",
+        "meta": "El bebé está acumulando hierro para sus primeros meses de vida. ¡Dale fuerte a los granos! Mantén la calma, hidrátate y prepárate para el mejor encuentro de tu vida."
+    }
+]
