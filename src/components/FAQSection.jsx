@@ -55,7 +55,10 @@ const FAQSection = () => {
 
                                 <div style={{ backgroundColor: 'var(--color-bg-lavender)', padding: '15px', borderRadius: '8px', marginBottom: '15px' }}>
                                     <h4 style={{ margin: '0 0 8px 0', color: 'var(--color-primary)', fontSize: '0.9em', textTransform: 'uppercase', letterSpacing: '0.5px' }}>📚 El Fundamento</h4>
-                                    <p style={{ margin: 0, color: 'var(--color-text-main)', lineHeight: '1.6' }}>{item.fundamento}</p>
+                                    <div
+                                        style={{ margin: 0, color: 'var(--color-text-main)', lineHeight: '1.6' }}
+                                        dangerouslySetInnerHTML={{ __html: item.fundamento }}
+                                    />
                                 </div>
 
                                 <div style={{ borderLeft: '4px solid var(--color-success)', paddingLeft: '12px' }}>

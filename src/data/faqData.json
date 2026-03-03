@@ -33,5 +33,12 @@
         "respuesta": "¡Mito falso! El pelo del bebé no causa acidez.",
         "fundamento": "La progesterona relaja la válvula del estómago y el tamaño del bebé presiona todo hacia arriba, facilitando el reflujo.",
         "tip_pro": "No te acuestes inmediatamente después de comer y prefiere porciones pequeñas 5 veces al día."
+    },
+    {
+        "id": "faq_prohibidos",
+        "pregunta": "🚫 ¿Qué alimentos debo evitar SÍ o SÍ durante el embarazo?",
+        "respuesta": "Para proteger a tu bebé de bacterias peligrosas, hay alimentos que debes suspender temporalmente.",
+        "fundamento": "<table style='width:100%; border-collapse: collapse; margin-top: 10px;'><tr style='background-color: var(--color-bg-lavender);'><th style='padding:8px; border:1px solid #ccc; text-align:left;'>Alimento</th><th style='padding:8px; border:1px solid #ccc; text-align:left;'>¿Por qué evitarlo? (Peligro)</th><th style='padding:8px; border:1px solid #ccc; text-align:left;'>El riesgo real</th></tr><tr><td style='padding:8px; border:1px solid #ccc;'>Leche no pasteurizada y Quesos blandos (frescos, brie, camembert)</td><td style='padding:8px; border:1px solid #ccc;'>Pueden contener <strong>Listeria</strong>.</td><td style='padding:8px; border:1px solid #ccc;'>Una bacteria que atraviesa la placenta y puede ser letal para el feto.</td></tr><tr><td style='padding:8px; border:1px solid #ccc;'>Huevo crudo (Mayonesa casera, postres crudos)</td><td style='padding:8px; border:1px solid #ccc;'>Riesgo de <strong>Salmonella</strong>.</td><td style='padding:8px; border:1px solid #ccc;'>Deshidratación severa y malestar fuerte para ti.</td></tr><tr><td style='padding:8px; border:1px solid #ccc;'>Sushi, Ceviche, Carne cruda o término medio</td><td style='padding:8px; border:1px solid #ccc;'>Parásitos como el <strong>Toxoplasma</strong>.</td><td style='padding:8px; border:1px solid #ccc;'>Afecta directamente el desarrollo neurológico del bebé.</td></tr><tr><td style='padding:8px; border:1px solid #ccc;'>Embutidos sin cocinar (Jamón serrano, salamis, salchichas frías)</td><td style='padding:8px; border:1px solid #ccc;'>Más <strong>Listeria</strong> a la vista.</td><td style='padding:8px; border:1px solid #ccc;'>Infecciones silenciosas en el embarazo. (Si los calientas hasta que humeen, sí los puedes comer).</td></tr></table>",
+        "tip_pro": "Ante la duda en un restaurante, pide siempre tus alimentos 'bien cocidos' y elige alimentos que vengan calientes y humeantes. ¡Nueve meses pasan volando!"
     }
 ]
