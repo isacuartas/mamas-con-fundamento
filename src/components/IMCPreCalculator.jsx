@@ -21,14 +21,17 @@ const IMCPreCalculator = ({ onCalculate }) => {
     if (!peso || !talla) return;
 
     const pesoNum = parseFloat(peso);
-    const tallaNum = parseFloat(talla);
-    
+    const tallaCm = parseFloat(talla);
+
     // Validar entradas básicas
-    if (pesoNum <= 0 || tallaNum <= 0) return;
+    if (pesoNum <= 0 || tallaCm <= 0) return;
+
+    // Convertir cm a metros para el cálculo oficial
+    const tallaNum = tallaCm / 100;
 
     // Calcular IMC = peso / talla^2
     const imc = pesoNum / (tallaNum * tallaNum);
-    
+
     // Clasificación MINSA
     let clasificacion = "";
     if (imc < 18.5) {
@@ -45,11 +48,11 @@ const IMCPreCalculator = ({ onCalculate }) => {
       imc: imc.toFixed(2),
       clasificacion,
       peso: pesoNum,
-      talla: tallaNum
+      talla: tallaNum // Guardamos en metros en el estado para consistencia con el resto de la app
     };
-    
+
     setResultado(data);
-    
+
     // Emitir el resultado al componente padre (o al store)
     if (onCalculate) {
       onCalculate(data);
@@ -62,24 +65,24 @@ const IMCPreCalculator = ({ onCalculate }) => {
       <form onSubmit={handleCalculate}>
         <div>
           <label>Peso Pregestacional (kg):</label>
-          <input 
-            type="number" 
-            step="0.01" 
-            value={peso} 
-            onChange={(e) => setPeso(e.target.value)} 
+          <input
+            type="number"
+            step="0.01"
+            value={peso}
+            onChange={(e) => setPeso(e.target.value)}
             placeholder="Ej. 65.5"
-            required 
+            required
           />
         </div>
         <div>
-          <label>Talla (m):</label>
-          <input 
-            type="number" 
-            step="0.01" 
-            value={talla} 
-            onChange={(e) => setTalla(e.target.value)} 
-            placeholder="Ej. 1.60"
-            required 
+          <label>Talla (cm):</label>
+          <input
+            type="number"
+            step="1"
+            value={talla}
+            onChange={(e) => setTalla(e.target.value)}
+            placeholder="Ej. 160"
+            required
           />
         </div>
         <button type="submit">Calcular IMC Inicial</button>

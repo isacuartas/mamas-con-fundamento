@@ -87,10 +87,12 @@ button:focus-visible {
   }
 
   a:hover {
-    color: #747bff;
+    color: var(--color-primary-hover);
   }
 
+  /* Mantener el fondo morado oscuro para contraste de la letra blanca */
   button {
-    background-color: #f9f9f9;
+    background-color: var(--color-primary);
+    color: white;
   }
 }

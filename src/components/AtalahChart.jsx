@@ -77,7 +77,7 @@ const AtalahChart = ({ patientData = [] }) => {
                             type="monotone"
                             dataKey="p97"
                             stroke="#ffcccc"
-                            name="P97 (Límite Obesidad)"
+                            name="Línea Superior (Obesidad)"
                             dot={false}
                             strokeWidth={2}
                             isAnimationActive={false}
@@ -86,7 +86,7 @@ const AtalahChart = ({ patientData = [] }) => {
                             type="monotone"
                             dataKey="p85"
                             stroke="#ffe4b5"
-                            name="P85 (Límite Sobrepeso)"
+                            name="Línea Media Alta (Sobrepeso)"
                             dot={false}
                             strokeWidth={2}
                             isAnimationActive={false}
@@ -95,7 +95,7 @@ const AtalahChart = ({ patientData = [] }) => {
                             type="monotone"
                             dataKey="p10"
                             stroke="#b3d4ff"
-                            name="P10 (Límite Normal/Bajo Peso)"
+                            name="Línea Inferior (Bajo Peso)"
                             dot={false}
                             strokeWidth={2}
                             isAnimationActive={false}
@@ -115,8 +115,27 @@ const AtalahChart = ({ patientData = [] }) => {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-            <div className="chart-legend-info">
-                <small>Zonas: Por debajo de P10 = Bajo Peso | Entre P10 y P85 = Normal | Entre P85 y P97 = Sobrepeso | Por encima de P97 = Obesidad</small>
+
+            <div className="chart-legend-info" style={{ marginTop: '20px', padding: '15px', backgroundColor: 'var(--color-bg-lavender)', borderRadius: '8px', border: '1px solid #e0d9fc' }}>
+                <h4 style={{ color: 'var(--color-primary)', margin: '0 0 10px 0', fontSize: '1.1rem' }}>💡 ¿Cómo leer mi gráfica?</h4>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', fontSize: '0.9rem', color: '#4a4a4a' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ width: '16px', height: '16px', backgroundColor: '#ffcccc', borderRadius: '50%', border: '1px solid #ff9999', display: 'inline-block' }}></span>
+                        <span><strong>Por encima de la fila roja:</strong> Obesidad</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ width: '16px', height: '16px', backgroundColor: '#ffe4b5', borderRadius: '50%', border: '1px solid #ffcc66', display: 'inline-block' }}></span>
+                        <span><strong>Entre amarilla y roja:</strong> Sobrepeso</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ width: '16px', height: '16px', backgroundColor: '#b3d4ff', borderRadius: '50%', border: '1px solid #66a3ff', display: 'inline-block' }}></span>
+                        <span><strong>Entre azul y amarilla:</strong> Normal</span>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ width: '16px', height: '16px', backgroundColor: 'white', borderRadius: '50%', border: '1px solid #b3d4ff', display: 'inline-block' }}></span>
+                        <span><strong>Por debajo de la fila azul:</strong> Bajo Peso</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

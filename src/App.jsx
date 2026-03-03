@@ -8,6 +8,7 @@ import WellnessBlocks from './components/WellnessBlocks';
 import FAQSection from './components/FAQSection';
 import ExportPDFButton from './components/ExportPDFButton';
 import WeightHistoryTable from './components/WeightHistoryTable';
+import DailyTracker from './components/DailyTracker';
 import { getNutritionalStatusForWeek } from './utils/atalahUtils';
 import './App.css';
 
@@ -128,6 +129,12 @@ function App() {
           📊 Panel de Monitoreo
         </button>
         <button
+          className={`tab-button ${activeTab === 'habitos' ? 'active' : ''}`}
+          onClick={() => setActiveTab('habitos')}
+        >
+          🗓️ Hábitos y Retos
+        </button>
+        <button
           className={`tab-button ${activeTab === 'faq' ? 'active' : ''}`}
           onClick={() => setActiveTab('faq')}
         >
@@ -201,6 +208,14 @@ function App() {
         <main style={{ marginTop: '20px' }}>
           <div className="form-card" style={{ maxWidth: '900px', margin: '0 auto', borderTop: '4px solid var(--color-success)' }}>
             <FAQSection />
+          </div>
+        </main>
+      )}
+
+      {activeTab === 'habitos' && (
+        <main style={{ marginTop: '20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <DailyTracker />
           </div>
         </main>
       )}
