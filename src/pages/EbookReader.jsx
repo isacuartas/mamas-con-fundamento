@@ -21,6 +21,7 @@ function EbookReader() {
     // Scroll to top on chapter change
     useEffect(() => {
         window.scrollTo(0, 0);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsMenuOpen(false);
     }, [location.pathname]);
 

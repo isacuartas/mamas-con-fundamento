@@ -9,11 +9,12 @@ import FAQSection from '../components/FAQSection';
 import ExportPDFButton from '../components/ExportPDFButton';
 import WeightHistoryTable from '../components/WeightHistoryTable';
 import DailyTracker from '../components/DailyTracker';
+import PortionsCalculator from '../components/PortionsCalculator';
 import { getNutritionalStatusForWeek } from '../utils/atalahUtils';
 import { Link } from 'react-router-dom';
 
 function Home() {
-    const [activeTab, setActiveTab] = useState('monitoreo');
+    const [activeTab, setActiveTab] = useState('hub');
 
     // Inicializar estado usando una función (se ejecuta solo al montar) en vez de useEffect para localStorage
     const [imcData, setImcData] = useState(() => {
@@ -130,26 +131,60 @@ function Home() {
                 )}
             </header>
 
-            <div className="tabs-container">
-                <button
-                    className={`tab-button ${activeTab === 'monitoreo' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('monitoreo')}
-                >
-                    📊 Panel de Monitoreo
-                </button>
-                <button
-                    className={`tab-button ${activeTab === 'habitos' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('habitos')}
-                >
-                    🗓️ Hábitos y Retos
-                </button>
-                <button
-                    className={`tab-button ${activeTab === 'faq' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('faq')}
-                >
-                    🧠 Preguntas Frecuentes
-                </button>
-            </div>
+            {/* Back to Hub Button when not in Hub */}
+            {activeTab !== 'hub' && (
+                <div style={{ maxWidth: '1200px', margin: '20px auto 0', padding: '0 20px' }}>
+                    <button
+                        onClick={() => setActiveTab('hub')}
+                        style={{
+                            background: 'transparent',
+                            border: '1px solid var(--color-primary)',
+                            color: 'var(--color-primary)',
+                            padding: '10px 20px',
+                            borderRadius: '30px',
+                            cursor: 'pointer',
+                            fontSize: '1rem',
+                            fontWeight: 'bold',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            transition: 'all 0.3s ease'
+                        }}
+                    >
+                        ← Volver al Menú Principal
+                    </button>
+                </div>
+            )}
+
+            {activeTab === 'hub' && (
+                <main>
+                    <div className="hub-grid">
+                        <Link to="/book" className="hub-card" style={{ textDecoration: 'none' }}>
+                            <div className="hub-icon">📖</div>
+                            <h2 className="hub-title">E-book Premium</h2>
+                            <p className="hub-desc">Lee "Nutrición con Fundamento", toda la ciencia detrás de tu nutrición en el embarazo.</p>
+                        </Link>
+
+                        <div className="hub-card" onClick={() => setActiveTab('monitoreo')}>
+                            <div className="hub-icon">⚖️</div>
+                            <h2 className="hub-title">Monitoreo Gestacional</h2>
+                            <p className="hub-desc">Supervisa tu ganancia de peso ideal con la Curva de Atalah del MINSA.</p>
+                        </div>
+
+                        <div className="hub-card" onClick={() => setActiveTab('porciones')}>
+                            <div className="hub-icon">🍽️</div>
+                            <h2 className="hub-title">Mis Porciones</h2>
+                            <p className="hub-desc">Calculadora de macronutrientes adaptada a tu trimestre y nivel de actividad.</p>
+                        </div>
+
+                        <div className="hub-card" onClick={() => setActiveTab('habitos')}>
+                            <div className="hub-icon">🧠</div>
+                            <h2 className="hub-title">Hábitos y FAQs</h2>
+                            <p className="hub-desc">Rastreador de metas diarias y respuestas a tus dudas más comunes.</p>
+                        </div>
+                    </div>
+                </main>
+            )}
 
             {activeTab === 'monitoreo' && (
                 <main className="main-grid">
@@ -213,18 +248,21 @@ function Home() {
                 </main>
             )}
 
-            {activeTab === 'faq' && (
+            {activeTab === 'porciones' && (
                 <main style={{ marginTop: '20px' }}>
-                    <div className="form-card" style={{ maxWidth: '900px', margin: '0 auto', borderTop: '4px solid var(--color-success)' }}>
-                        <FAQSection />
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px' }}>
+                        <PortionsCalculator patientData={imcData} historialMonitoreo={historialMonitoreo} />
                     </div>
                 </main>
             )}
 
             {activeTab === 'habitos' && (
                 <main style={{ marginTop: '20px' }}>
-                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px' }}>
                         <DailyTracker />
+                        <div style={{ marginTop: '40px' }} className="form-card">
+                            <FAQSection />
+                        </div>
                     </div>
                 </main>
             )}

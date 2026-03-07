@@ -9,6 +9,7 @@ const DailyTracker = () => {
         // Get local date string YYYY-MM-DD
         const tzOffset = (new Date()).getTimezoneOffset() * 60000;
         const localISOTime = (new Date(Date.now() - tzOffset)).toISOString().split('T')[0];
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setTodayStr(localISOTime);
 
         const storedHistory = JSON.parse(localStorage.getItem('minsa_daily_history') || '[]');
@@ -18,9 +19,10 @@ const DailyTracker = () => {
         if (todayEntry) {
             setTodayData(todayEntry);
         } else {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setTodayData({ water: false, vitamins: false, activity: false });
         }
-    }, []);
+    }, [todayStr]);
 
     const handleToggle = (field) => {
         const updatedToday = { ...todayData, [field]: !todayData[field] };
@@ -40,8 +42,7 @@ const DailyTracker = () => {
         localStorage.setItem('minsa_daily_history', JSON.stringify(newHistory));
     };
 
-    // Check how many days of physical activity they've done in recorded history
-    const activityDays = history.filter(h => h.activity).length;
+    // const activityDays = history.filter(h => h.activity).length;
 
     // Funciones del Calendario Real
     const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
