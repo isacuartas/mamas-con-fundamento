@@ -104,31 +104,32 @@ function Home() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-                    <div className="brand-logo-text">Mamás con <span>Fundamento</span></div>
-                    <Link to="/book" style={{
-                        backgroundColor: 'var(--color-success)',
-                        color: 'white',
-                        padding: '8px 16px',
-                        borderRadius: '20px',
-                        textDecoration: 'none',
-                        fontWeight: 'bold',
-                        fontSize: '0.9em',
-                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                    }}>
-                        📖 Leer E-book
-                    </Link>
+            <header className="App-header" style={{ position: 'relative', textAlign: 'center', background: 'white', borderRadius: '16px', padding: '30px 20px', boxShadow: '0 10px 30px rgba(106, 90, 205, 0.05)', maxWidth: '1000px', margin: '0 auto' }}>
+                <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', margin: '0 0 10px 0' }}>Mamás con <span style={{ fontWeight: 'normal' }}>Fundamento</span></h1>
+
+                <Link to="/book" style={{
+                    position: 'absolute',
+                    top: '20px',
+                    right: '20px',
+                    backgroundColor: 'var(--color-success)',
+                    color: 'white',
+                    padding: '8px 20px',
+                    borderRadius: '25px',
+                    textDecoration: 'none',
+                    fontWeight: 'bold',
+                    fontSize: '0.95em',
+                    boxShadow: '0 4px 15px rgba(139, 195, 74, 0.3)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px'
+                }}>
+                    📖 Leer E-book
+                </Link>
+
+                <div style={{ marginTop: '10px' }}>
+                    <h2 style={{ fontSize: '1.4em', color: 'var(--color-primary)', margin: '15px 0 5px 0' }}>Monitoreo Gestacional MINSA</h2>
+                    <p style={{ color: 'var(--color-text-muted)', fontSize: '1.05rem', margin: 0 }}>Herramientas gratuitas para el control de tu embarazo</p>
                 </div>
-                <div style={{ marginTop: '20px' }}>
-                    <h1 style={{ fontSize: '1.5em', marginTop: '10px' }}>Monitoreo Gestacional MINSA</h1>
-                    <p>Herramientas gratuitas para el control de tu embarazo</p>
-                </div>
-                {imcData && (
-                    <button onClick={handleReset} style={{ backgroundColor: '#e74c3c', color: 'white', border: 'none', padding: '10px 15px', borderRadius: 'var(--radius-app)', cursor: 'pointer', alignSelf: 'flex-end', marginTop: '-30px' }}>
-                        Reiniciar Datos
-                    </button>
-                )}
             </header>
 
             {/* Back to Hub Button when not in Hub */}
@@ -178,9 +179,15 @@ function Home() {
                         </div>
 
                         <div className="hub-card" onClick={() => setActiveTab('habitos')}>
+                            <div className="hub-icon">🗓️</div>
+                            <h2 className="hub-title">Hábitos y Retos</h2>
+                            <p className="hub-desc">Rastreador de metas diarias para mantenerte activa e hidratada.</p>
+                        </div>
+
+                        <div className="hub-card" onClick={() => setActiveTab('faq')}>
                             <div className="hub-icon">🧠</div>
-                            <h2 className="hub-title">Hábitos y FAQs</h2>
-                            <p className="hub-desc">Rastreador de metas diarias y respuestas a tus dudas más comunes.</p>
+                            <h2 className="hub-title">FAQs</h2>
+                            <p className="hub-desc">Respuestas científicas a tus dudas más comunes sobre la nutrición.</p>
                         </div>
                     </div>
                 </main>
@@ -194,7 +201,10 @@ function Home() {
                             <IMCPreCalculator onCalculate={handleCalculateIMC} />
                         ) : (
                             <div className="profile-summary-card form-card" style={{ background: 'var(--color-bg-lavender)', borderLeft: '5px solid var(--color-primary)' }}>
-                                <h2 style={{ marginTop: 0, color: 'var(--color-primary)' }}>👩‍🍼 Tu Perfil Nutricional</h2>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <h2 style={{ marginTop: 0, color: 'var(--color-primary)' }}>👩‍🍼 Tu Perfil Nutricional</h2>
+                                    <button onClick={handleReset} style={{ background: 'transparent', color: '#e74c3c', border: '1px solid #e74c3c', padding: '4px 10px', borderRadius: '15px', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 'bold' }}>Reiniciar</button>
+                                </div>
                                 <p><strong>Estatura:</strong> {imcData.talla}m</p>
                                 <p><strong>Peso Inicial (Sem 10):</strong> {imcData.peso}kg</p>
                                 <p><strong>Punto de Partida:</strong> {imcData.imc} ({imcData.clasificacion})</p>
@@ -260,7 +270,14 @@ function Home() {
                 <main style={{ marginTop: '20px' }}>
                     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px' }}>
                         <DailyTracker />
-                        <div style={{ marginTop: '40px' }} className="form-card">
+                    </div>
+                </main>
+            )}
+
+            {activeTab === 'faq' && (
+                <main style={{ marginTop: '20px' }}>
+                    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 20px' }}>
+                        <div style={{ marginTop: '20px' }} className="form-card">
                             <FAQSection />
                         </div>
                     </div>
