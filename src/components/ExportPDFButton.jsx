@@ -154,8 +154,16 @@ const ExportPDFButton = ({ patientData, historialMonitoreo, chartElementId }) =>
                 pdf.text("Error: No se pudo renderizar la gráfica para el reporte.", 20, 110);
             }
 
-            // Descargar el Archivo
-            pdf.save(`Reporte_Gestacional_Semana_${ultimoControl.semana}.pdf`);
+            // 7. Descargar el Archivo forzando el prompt del navegador
+            const pdfBlob = pdf.output('blob');
+            const blobUrl = URL.createObjectURL(pdfBlob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = `Reporte_Gestacional_Semana_${ultimoControl.semana}.pdf`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(blobUrl);
 
         } catch (error) {
             console.error("Error al generar el PDF:", error);

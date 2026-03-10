@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter0() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 0: De la Consulta a la Vida Real (Mi Historia)</h1>
-            <h2>"No soy solo tu nutricionista; soy una mamá en la misma trinchera que tú."</h2>
+            <h1>Capítulo 0: Bienvenida</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Tu cuerpo empieza a crear una vida; tu responsabilidad es darle los mejores materiales."</h2>
+            </div>
             <p>Este embarazo no fue un accidente; fue algo que mi esposo y yo planeamos y deseamos mucho. Pero, siendo muy sincera, aunque soy Ingeniera Química con una especialización en nutrición deportiva, la nutrición en el embarazo nunca había sido mi foco. Mi mundo eran los datos de rendimiento y la optimización física. Mi plan inicial para mi embarazo era simplemente ver qué pasaba, confiando en lo que ya sabía.</p>
             <p>Mi primer trimestre fue un reto de adaptación física. Pasé de ser una mujer dedicada al alto rendimiento, con 12 o 13 horas de triatlón a la semana, a tener que frenar casi por completo porque mi cuerpo me pidió calma. Perdí masa muscular, bajé un kilo y lidié con una indigestión constante que me hizo cogerle fastidio a alimentos que antes amaba, como el huevo.</p>
             <p>Lo que realmente me cambió el "chip" ocurrió en el segundo trimestre.</p>

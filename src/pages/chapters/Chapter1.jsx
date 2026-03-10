@@ -4,7 +4,9 @@ function Chapter1() {
     return (
         <div className="chapter-content">
             <h1>Capítulo 1: Calidad vs. Cantidad</h1>
-            <h2>"No necesitas comer por dos, necesitas nutrirte mejor"</h2>
+            <div className="chapter-subtitle-box">
+                <h2>"No necesitas comer por dos, necesitas nutrirte mejor"</h2>
+            </div>
             <p>Si hay un consejo que todas escuchamos apenas damos la noticia del embarazo es ese famoso: "Ahora tienes que comer por dos". Y aunque nos lo dicen con todo el amor del mundo, la realidad es que nuestro cuerpo no necesita el doble de volumen, sino el doble de calidad.</p>
 
             <h3>Olvídate de las calorías</h3>

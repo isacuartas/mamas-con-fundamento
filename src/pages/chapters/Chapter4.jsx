@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter4() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 4: Microbiota Intestinal</h1>
-            <h2>"Tu primer regalo de inmunidad: Sembrando salud desde el vientre"</h2>
+            <h1>Capítulo 4: Microbiota Intestinal (La Semilla de la Inmunidad)</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Tu estómago y el de tu bebé son la primera línea de defensa"</h2>
+            </div>
             <p>Como hemos visto, tu bebé recibe de ti oxígeno y nutrientes, pero hay algo más que estás "heredando" en cada bocado: tus bacterias. La microbiota (el ecosistema de microorganismos que vive en tu intestino y en tu canal vaginal) es el primer sistema de defensa que tu hijo conocerá.</p>
             <p>Lo que sucede en tu sistema digestivo hoy, determina en gran medida la salud inmunológica, metabólica y hasta alérgica de tu bebé mañana.</p>
 

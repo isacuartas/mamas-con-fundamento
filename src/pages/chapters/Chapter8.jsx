@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter8() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 8: El Método del Plato (y la Realidad de tu Digestión)</h1>
-            <h2>"Por qué ya no te cabe lo mismo de antes"</h2>
+            <h1>Capítulo 8: El Método del Plato (Frecuencia y Digestión)</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Tu estómago cambia de forma, tu forma de comer también debería"</h2>
+            </div>
             <p>Si hay algo que nadie te dice es que, en el embarazo, tu sistema digestivo se vuelve otro. Esa recomendación de "comer mucha ensalada" choca de frente con la realidad: el reflujo, las agrieras y esa sensación de que la comida se quedó "atrapada" en la garganta.</p>
             <p>En este capítulo vamos a entender por qué pasa esto y cómo ajustar tu plato para nutrirte sin terminar con malestar.</p>
 
@@ -16,7 +18,7 @@ function Chapter8() {
             </ul>
 
             <div className="image-placeholder">
-                <p>[ESPACIO PARA IMAGEN: Comparativa anatómica de un estómago normal vs. un estómago comprimido por el útero en el tercer trimestre]</p>
+                <img src="/images/ebook/estomago.png" alt="Comparativa de estómago normal y estómago comprimido en el tercer trimestre" className="ebook-image" />
             </div>
 
             <h3>2. El Dilema de la Ensalada: Volumen vs. Densidad</h3>
@@ -31,11 +33,11 @@ function Chapter8() {
             <p>A veces el problema no es el ácido, sino que la comida se queda "estancada" demasiado tiempo en el estómago, generando presión. Podemos usar la naturaleza a nuestro favor:</p>
             <ul>
                 <li><strong>Papaya y Piña (con medida):</strong> La papaína (de la papaya) y la bromelina (de la piña) son enzimas que ayudan a romper las proteínas más rápido.</li>
-                <li><strong>El truco:</strong> Consumir una pequeña porción de estas frutas al inicio de la comida puede actuar como un "arrancador" químico, acelerando la digestión y reduciendo el tiempo que el alimento pasa en el estómago.</li>
+                <li><strong>La regla de oro:</strong> Una porción grande (ej. un plato típico gigante con arroz, papa, plátano y carne) puede tomar hasta 5 horas en vaciarse de un estómago de embarazo. Las porciones pequeñas (densas en nutrientes) tardan unas 2 horas.</li>
             </ul>
 
-            <div className="image-placeholder">
-                <p>[ESPACIO PARA IMAGEN: Tabla de "Tiempos de Digestión": Comparativa visual de cuánto tarda en vaciarse un plato alto en grasas vs. uno basado en el método de densidad y enzimas naturales]</p>
+            <div className="image-placeholder" style={{ marginTop: '20px' }}>
+                <img src="/images/ebook/digestion.png" alt="Tiempos de digestión comparando plato alto en grasas vs método de densidad" className="ebook-image" />
             </div>
 
             <h3>4. Semáforo contra el Reflujo e Indigestión</h3>

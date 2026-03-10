@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter6() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 6: Tu progreso bajo la lupa (La App y el Peso)</h1>
-            <h2>"Datos para tu tranquilidad, no para el juicio"</h2>
+            <h1>Capítulo 6: Tu Cuerpo Está Trabajando (El Progreso y el Peso)</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Tu peso no te define, es solo un dato en medio de un milagro"</h2>
+            </div>
             <p>Uno de los momentos que más ansiedad genera en el embarazo es subirse a la báscula. Socialmente, nos han enseñado a temerle al aumento de peso, pero cuando entendemos la ciencia detrás de esos números, el miedo se transforma en confianza.</p>
             <p>Si estás usando mi App para registrar tu peso, quiero que veas esa gráfica no como un examen que debes "pasar", sino como un mapa que nos asegura que la construcción de tu bebé tiene todos los recursos necesarios.</p>
 
@@ -38,7 +40,7 @@ function Chapter6() {
             </ul>
 
             <div className="image-placeholder">
-                <p>[ESPACIO PARA IMAGEN: Captura de pantalla de la gráfica de la App mostrando la zona verde de Atalah y un ejemplo del PDF]</p>
+                <img src="/images/ebook/atalah.png" alt="Gráfica médica de aumento de peso Atalah mostrando la zona verde saludable" className="ebook-image" />
             </div>
 
             <h3>El mensaje final</h3>

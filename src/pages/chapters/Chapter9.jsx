@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter9() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 9: Recetario con Propósito</h1>
-            <h2>"Comida funcional: Pocos bocados, mucha nutrición"</h2>
+            <h1>Capítulo 9: Recetario y Aplicación Práctica</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Soluciones rápidas y densas para los días pesados"</h2>
+            </div>
             <p>En internet sobran recetas de "comida saludable", pero aquí no buscamos solo eso. Buscamos preparaciones que respeten tu digestión lenta, que no te inflamen y que aseguren que cada gramo que entra a tu cuerpo cuente para el desarrollo de tu bebé.</p>
             <p>Aquí tienes el menú diseñado con fundamento técnico para acompañar cada momento de tu día.</p>
 

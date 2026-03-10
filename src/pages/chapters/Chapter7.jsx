@@ -4,7 +4,10 @@ function Chapter7() {
     return (
         <div className="chapter-content">
             <h1>Capítulo 7: Seguridad Alimentaria</h1>
-            <h2>"Protegiendo el sistema: El semáforo de lo que sí y lo que no"</h2>
+            <div className="chapter-subtitle-box">
+                <h2>"Protegiendo el sistema: El semáforo de lo que sí y lo que no"</h2>
+                <img src="/images/ebook/semaforo.png" alt="Semáforo del Pescado en el Embarazo" className="ebook-image" />
+            </div>
             <p>En este capítulo vamos a hablar de los "guardianes" de tu alimentación. No se trata de vivir con miedo a lo que comes, sino de establecer un sistema de seguridad para que tú y tu bebé estén protegidos de riesgos que son totalmente evitables.</p>
 
             <h3>1. El Semáforo del Café: La regla de los 200 mg</h3>
@@ -40,7 +43,7 @@ function Chapter7() {
             </ul>
 
             <div className="image-placeholder">
-                <p>[ESPACIO PARA IMAGEN: Infografía del "Semáforo del Pescado" y tabla comparativa de cafeína]</p>
+                <img src="/images/ebook/semaforo.png" alt="Semáforo del Pescado en el Embarazo" className="ebook-image" />
             </div>
 
             <h3>El mensaje final</h3>

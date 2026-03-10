@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter3() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 3: El Universo del DHA</h1>
-            <h2>"El alimento maestro del cerebro y la retina"</h2>
+            <h1>Capítulo 3: El Universo del DHA y la Salud Cerebral</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Construyendo el centro de control de tu bebé"</h2>
+            </div>
             <p>Este nutriente merece su propio espacio porque es el que marca la diferencia en el desarrollo cognitivo de tu bebé.</p>
 
             <h3>El DHA en tu línea de tiempo: ¿Qué pasa en cada etapa?</h3>

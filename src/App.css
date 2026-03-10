@@ -497,11 +497,38 @@ button[type="submit"] {
   text-align: justify !important;
 }
 
-.chapter-content h1,
+.chapter-content h1 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.chapter-subtitle-box {
+  background-color: #fff7ed;
+  border-left: 6px solid #f97316;
+  padding: 20px 25px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.chapter-subtitle-box h2 {
+  color: #c2410c;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
 .chapter-content h2,
 .chapter-content h3 {
   color: var(--color-primary);
   margin-top: 0;
+  margin-bottom: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 

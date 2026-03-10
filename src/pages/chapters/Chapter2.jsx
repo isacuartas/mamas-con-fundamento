@@ -3,8 +3,10 @@ import React from 'react';
 function Chapter2() {
     return (
         <div className="chapter-content">
-            <h1>Capítulo 2: Los Pilares de la Nutrición Gestacional</h1>
-            <h2>"Mucho más que simples consejos"</h2>
+            <h1>Capítulo 2: Los Pilares Nutricionales del Embarazo</h1>
+            <div className="chapter-subtitle-box">
+                <h2>"Las proteínas construyen, las grasas protegen, los carbohidratos impulsan"</h2>
+            </div>
             <p>En este capítulo vamos a profundizar en los cimientos biológicos de tu embarazo. No son sugerencias, son los requerimientos técnicos que tu cuerpo y tu bebé exigen para funcionar al 100%.</p>
 
             <h3>Pilar 1: El agua no es solo para la sed (Es para fabricar sangre)</h3>

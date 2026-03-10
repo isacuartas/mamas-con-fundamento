@@ -4,7 +4,9 @@ function Chapter5() {
     return (
         <div className="chapter-content">
             <h1>Capítulo 5: Traduciendo los datos al plato (Ejemplos Reales)</h1>
-            <h2>"Si no lo puedes medir en crudo, no lo puedes controlar"</h2>
+            <div className="chapter-subtitle-box">
+                <h2>"Si no lo puedes medir en crudo, no lo puedes controlar"</h2>
+            </div>
             <p>Entender la teoría es el primer paso, pero el éxito real ocurre cuando sabemos exactamente qué poner en el carrito del mercado y cómo servirlo en nuestra mesa. En este capítulo, vamos a bajar los números a porciones de comida real para que puedas planificar tus días con total confianza y sin estrés.</p>
 
             <h3>1. El Reto de la Proteína: Pesar en crudo es la clave</h3>
