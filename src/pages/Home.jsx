@@ -104,37 +104,47 @@ function Home() {
 
     return (
         <div className="App">
-            <header className="App-header" style={{ position: 'relative', textAlign: 'center', background: 'white', borderRadius: '16px', padding: '30px 20px', boxShadow: '0 10px 30px rgba(106, 90, 205, 0.05)', maxWidth: '1000px', margin: '0 auto' }}>
-                <h1 style={{ color: 'var(--color-primary)', fontSize: '2.5rem', margin: '0 0 10px 0' }}>Mamás con <span style={{ fontWeight: 'normal' }}>Fundamento</span></h1>
+            <header style={{ position: 'relative', textAlign: 'center', background: 'transparent', padding: '30px 20px', maxWidth: '800px', margin: '0 auto' }}>
+                {/* Botón Salir de la Cuenta */}
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+                    <button style={{
+                        background: 'transparent',
+                        border: '1px solid var(--color-primary)',
+                        color: 'var(--color-primary)',
+                        padding: '10px 30px',
+                        borderRadius: '25px',
+                        fontSize: '1rem',
+                        fontWeight: 'bold',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease'
+                    }}>
+                        Salir de la Cuenta
+                    </button>
+                </div>
 
-                <Link to="/book" style={{
-                    position: 'absolute',
-                    top: '20px',
-                    right: '20px',
-                    backgroundColor: 'var(--color-success)',
-                    color: 'white',
-                    padding: '8px 20px',
-                    borderRadius: '25px',
-                    textDecoration: 'none',
-                    fontWeight: 'bold',
-                    fontSize: '0.95em',
-                    boxShadow: '0 4px 15px rgba(139, 195, 74, 0.3)',
+                {/* Logo Placeholder */}
+                <div style={{
+                    width: '120px',
+                    height: '120px',
+                    borderRadius: '50%',
+                    border: '3px solid var(--color-primary)',
+                    margin: '0 auto 20px',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '8px'
+                    justifyContent: 'center',
+                    background: 'rgba(106, 90, 205, 0.05)'
                 }}>
-                    📖 Leer E-book
-                </Link>
-
-                <div style={{ marginTop: '10px' }}>
-                    <h2 style={{ fontSize: '1.4em', color: 'var(--color-primary)', margin: '15px 0 5px 0' }}>Monitoreo Gestacional MINSA</h2>
-                    <p style={{ color: 'var(--color-text-muted)', fontSize: '1.05rem', margin: 0 }}>Herramientas gratuitas para el control de tu embarazo</p>
+                    <span style={{ color: 'var(--color-primary)', fontSize: '0.8rem', textAlign: 'center', fontWeight: 'bold' }}>Logo<br />Mamás con<br />Fundamento</span>
                 </div>
+
+                <h1 style={{ color: 'var(--color-primary)', fontSize: '1.6rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>
+                    Bienvenida a<br />Mamás con Fundamento
+                </h1>
             </header>
 
             {/* Back to Hub Button when not in Hub */}
             {activeTab !== 'hub' && (
-                <div style={{ maxWidth: '1200px', margin: '20px auto 0', padding: '0 20px' }}>
+                <div style={{ maxWidth: '1200px', margin: '0 auto 20px', padding: '0 20px' }}>
                     <button
                         onClick={() => setActiveTab('hub')}
                         style={{
@@ -152,42 +162,42 @@ function Home() {
                             transition: 'all 0.3s ease'
                         }}
                     >
-                        ← Volver al Menú Principal
+                        ← Volver a Página Principal
                     </button>
                 </div>
             )}
 
             {activeTab === 'hub' && (
-                <main>
-                    <div className="hub-grid">
-                        <Link to="/book" className="hub-card" style={{ textDecoration: 'none' }}>
-                            <div className="hub-icon">📖</div>
-                            <h2 className="hub-title">E-book Premium</h2>
-                            <p className="hub-desc">Lee "Nutrición con Fundamento", toda la ciencia detrás de tu nutrición en el embarazo.</p>
+                <main style={{ padding: '0 20px' }}>
+                    <div className="hub-grid" style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                        gap: '20px',
+                        maxWidth: '600px',
+                        margin: '0 auto'
+                    }}>
+                        {/* 1. Nutrición Integral (E-book) */}
+                        <Link to="/book" className="hub-card" style={{ textDecoration: 'none', textAlign: 'center', padding: '30px 15px' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🍎</div>
+                            <h2 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--color-text)' }}>Nutrición<br />Integral</h2>
                         </Link>
 
-                        <div className="hub-card" onClick={() => setActiveTab('monitoreo')}>
-                            <div className="hub-icon">⚖️</div>
-                            <h2 className="hub-title">Monitoreo Gestacional</h2>
-                            <p className="hub-desc">Supervisa tu ganancia de peso ideal con la Curva de Atalah del MINSA.</p>
+                        {/* 2. Bienestar Materno (Hábitos/Daily Tracker) */}
+                        <div className="hub-card" onClick={() => setActiveTab('habitos')} style={{ textAlign: 'center', padding: '30px 15px', cursor: 'pointer' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🧘‍♀️</div>
+                            <h2 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--color-text)' }}>Bienestar<br />Materno</h2>
                         </div>
 
-                        <div className="hub-card" onClick={() => setActiveTab('porciones')}>
-                            <div className="hub-icon">🍽️</div>
-                            <h2 className="hub-title">Mis Porciones</h2>
-                            <p className="hub-desc">Calculadora de macronutrientes adaptada a tu trimestre y nivel de actividad.</p>
+                        {/* 3. Seguimiento Peso (Monitoreo Atalah) */}
+                        <div className="hub-card" onClick={() => setActiveTab('monitoreo')} style={{ textAlign: 'center', padding: '30px 15px', cursor: 'pointer' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '15px' }}>📅</div>
+                            <h2 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--color-text)' }}>Seguimiento<br />Peso</h2>
                         </div>
 
-                        <div className="hub-card" onClick={() => setActiveTab('habitos')}>
-                            <div className="hub-icon">🗓️</div>
-                            <h2 className="hub-title">Hábitos y Retos</h2>
-                            <p className="hub-desc">Rastreador de metas diarias para mantenerte activa e hidratada.</p>
-                        </div>
-
-                        <div className="hub-card" onClick={() => setActiveTab('faq')}>
-                            <div className="hub-icon">🧠</div>
-                            <h2 className="hub-title">FAQs</h2>
-                            <p className="hub-desc">Respuestas científicas a tus dudas más comunes sobre la nutrición.</p>
+                        {/* 4. Mis Porciones (Calculadora Macros) */}
+                        <div className="hub-card" onClick={() => setActiveTab('porciones')} style={{ textAlign: 'center', padding: '30px 15px', cursor: 'pointer' }}>
+                            <div style={{ fontSize: '3rem', marginBottom: '15px' }}>🍽️</div>
+                            <h2 style={{ fontSize: '1.1rem', margin: 0, color: 'var(--color-text)' }}>Mis<br />Porciones</h2>
                         </div>
                     </div>
                 </main>

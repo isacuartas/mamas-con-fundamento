@@ -82,7 +82,7 @@ function Login() {
             </div>
 
             <Link to="/" style={{ marginTop: '20px', color: '#666', textDecoration: 'none' }}>
-                ← Volver a Herramientas Gratuitas
+                ← Volver a Página Principal
             </Link>
         </div>
     );

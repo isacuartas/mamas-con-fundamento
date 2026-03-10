@@ -17,10 +17,14 @@ function EbookReader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+    const mainRef = React.useRef(null);
 
     // Scroll to top on chapter change
     useEffect(() => {
         window.scrollTo(0, 0);
+        if (mainRef.current) {
+            mainRef.current.scrollTo(0, 0);
+        }
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsMenuOpen(false);
     }, [location.pathname]);
@@ -73,7 +77,7 @@ function EbookReader() {
                 {isMenuOpen && <div className="sidebar-overlay" onClick={() => setIsMenuOpen(false)}></div>}
 
                 {/* Main Reading Area */}
-                <main className="reading-area">
+                <main className="reading-area" ref={mainRef}>
                     <Routes>
                         <Route path="/" element={<div className="chapter-content">
                             <h1>Bienvenida a la Guía ✨</h1>

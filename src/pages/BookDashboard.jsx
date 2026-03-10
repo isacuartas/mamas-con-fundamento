@@ -65,8 +65,8 @@ function DashboardMenu() {
             Comenzar Lectura
           </button>
 
-          <Link to="/" style={{ display: 'inline-block', marginTop: '30px', color: '#666', textDecoration: 'none' }}>
-            ← Volver a Herramientas Gratuitas
+          <Link to="/" className="back-link" style={{ display: 'inline-block', marginTop: '30px', color: 'var(--color-primary)', textDecoration: 'none', fontWeight: 'bold' }}>
+            ← Volver a Página Principal
           </Link>
         </div>
       </main>

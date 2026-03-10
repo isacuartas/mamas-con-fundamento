@@ -1,99 +1,48 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Chapter6() {
     return (
         <div className="chapter-content">
-            <h3 style={{ color: '#888', textTransform: 'uppercase', fontSize: '0.8em', letterSpacing: '2px', margin: '0 0 5px 0' }}>
-                Capítulo 6
-            </h3>
-            <h1 style={{ marginTop: 0 }}>Dejemos la Báscula en Paz (O casi)</h1>
+            <h1>Capítulo 6: Tu progreso bajo la lupa (La App y el Peso)</h1>
+            <h2>"Datos para tu tranquilidad, no para el juicio"</h2>
+            <p>Uno de los momentos que más ansiedad genera en el embarazo es subirse a la báscula. Socialmente, nos han enseñado a temerle al aumento de peso, pero cuando entendemos la ciencia detrás de esos números, el miedo se transforma en confianza.</p>
+            <p>Si estás usando mi App para registrar tu peso, quiero que veas esa gráfica no como un examen que debes "pasar", sino como un mapa que nos asegura que la construcción de tu bebé tiene todos los recursos necesarios.</p>
 
-            <div style={{ backgroundColor: 'var(--color-bg-lavender)', padding: '20px', borderRadius: '8px', fontStyle: 'italic', marginBottom: '30px', borderLeft: '4px solid var(--color-primary)' }}>
-                "El peso es un dato, no una calificación moral."
+            <h3>1. La anatomía del peso: ¿A dónde van esos kilos?</h3>
+            <p>Si te pesas y ves que has subido, por ejemplo, 12 o 15 kilos al final del proceso, tu mente podría pensar inmediatamente en "grasa". Pero la realidad biológica es un trabajo de infraestructura masivo. Aquí tienes el desglose de lo que tu cuerpo está sosteniendo realmente:</p>
+            <ul>
+                <li><strong>El Bebé:</strong> 3.4 kg (promedio).</li>
+                <li><strong>La Placenta:</strong> 0.7 kg (un órgano nuevo que creaste desde cero).</li>
+                <li><strong>Líquido Amniótico:</strong> 0.8 kg (el sistema de amortiguación de tu bebé).</li>
+                <li><strong>Crecimiento del Útero:</strong> 1.0 kg (un músculo que se expande radicalmente).</li>
+                <li><strong>Tejido Mamario:</strong> 0.5 a 1.0 kg (preparación para la lactancia).</li>
+                <li><strong>Volumen de Sangre:</strong> 1.5 a 2.0 kg (¡tienes un 50% más de sangre circulando!).</li>
+                <li><strong>Reserva de fluidos:</strong> 1.5 a 2.0 kg.</li>
+                <li><strong>Reservas de energía (Grasa necesaria):</strong> 3.0 a 4.0 kg. Esta grasa no es estética; es el combustible de reserva para el desarrollo del cerebro del bebé y la energía que necesitarás para producir leche.</li>
+            </ul>
+            <p>Como ves, la mayor parte de ese peso es agua, sangre y soporte vital. Sin ese aumento, el desarrollo de tu hijo estaría comprometido.</p>
+
+            <h3>2. Entendiendo la Gráfica de la App (El Método Atalah)</h3>
+            <p>En la App no usamos un rango "estándar" para todas, porque cada cuerpo parte de un lugar diferente. Usamos la Gráfica de Atalah, que se ajusta según tu IMC (Índice de Masa Corporal) antes de quedar embarazada.</p>
+            <ul>
+                <li><strong>Punto de partida:</strong> Si empezaste el embarazo con un peso bajo, tu cuerpo tiene "permiso" biológico para subir más (hasta 18 kg), porque necesita construir reservas. Si empezaste con un peso mayor, el rango de ganancia será más estrecho (7 a 11 kg) para evitar complicaciones como la diabetes gestacional.</li>
+                <li><strong>La zona verde:</strong> Lo que buscamos es que tus registros se mantengan dentro de la franja sombreada.</li>
+                <li><strong>La tendencia es lo que cuenta:</strong> No te obsesiones si una semana subiste un poco más o menos. Lo que nos da paz mental es ver que la línea tiene una tendencia ascendente y gradual, especialmente a partir del segundo trimestre.</li>
+            </ul>
+
+            <h3>3. El Reporte PDF: Tu puente con el médico</h3>
+            <p>Sé que a veces las citas de control prenatal pueden ser rápidas o estresantes si el médico solo mira el peso del día. Por eso diseñé el Reporte en PDF descargable.</p>
+            <ul>
+                <li><strong>Llévalo a tu cita:</strong> Al mostrarle a tu ginecólogo la curva completa de tu peso, le permites ver el panorama general. Esto demuestra que tienes un control consciente y fundamentado de tu proceso.</li>
+                <li><strong>Evidencia de nutrición:</strong> Si estás comiendo según las tablas del Capítulo 5, tu ganancia de peso será de calidad. El reporte es la prueba de que estás nutriendo la "obra" correctamente.</li>
+            </ul>
+
+            <div className="image-placeholder">
+                <p>[ESPACIO PARA IMAGEN: Captura de pantalla de la gráfica de la App mostrando la zona verde de Atalah y un ejemplo del PDF]</p>
             </div>
 
-            <p>
-                Muchas mujeres llegan a consulta aterradas por los números que ven en su curva de ganancia de peso, y creo que gran parte del problema es cómo se los comunican.
-            </p>
-
-            <h2>El mito de los "Kilos Ideales"</h2>
-            <p>
-                No hay un número mágico universal. La recomendación médica de ganancia de peso <strong>depende completamente de tu punto de partida</strong> (tu IMC pregestacional). Y es precisamente por esto que creé la herramienta interactiva en esta misma app.
-            </p>
-
-            <div style={{ marginTop: '30px', marginBottom: '40px' }}>
-                <h3 style={{ color: 'var(--color-primary)', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>
-                    ¿De qué está hecho ese peso que subes?
-                </h3>
-                <p>Cuando ves la báscula subir, es normal sentir algo de frustración si mides tu cuerpo con la mentalidad previa al embarazo. Pero quiero que sepas exactamente cómo se distribuyen, en promedio, esos 12 kilos que pide el médico:</p>
-
-                <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px', fontSize: '0.95em' }}>
-                    <thead>
-                        <tr style={{ backgroundColor: 'var(--color-primary)', color: 'white', textAlign: 'left' }}>
-                            <th style={{ padding: '12px', borderTopLeftRadius: '8px' }}>Componente</th>
-                            <th style={{ padding: '12px', borderTopRightRadius: '8px' }}>Peso Aprox.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style={{ borderBottom: '1px solid #eee' }}>
-                            <td style={{ padding: '12px' }}>El bebé</td>
-                            <td style={{ padding: '12px' }}>3.0 - 3.5 kg</td>
-                        </tr>
-                        <tr style={{ borderBottom: '1px solid #eee', backgroundColor: '#f9f9f9' }}>
-                            <td style={{ padding: '12px' }}>La Placenta</td>
-                            <td style={{ padding: '12px' }}>0.5 - 1.0 kg</td>
-                        </tr>
-                        <tr style={{ borderBottom: '1px solid #eee' }}>
-                            <td style={{ padding: '12px' }}>Líquido Amniótico</td>
-                            <td style={{ padding: '12px' }}>1.0 kg</td>
-                        </tr>
-                        <tr style={{ borderBottom: '1px solid #eee', backgroundColor: '#f9f9f9' }}>
-                            <td style={{ padding: '12px' }}>Utero y Pechos</td>
-                            <td style={{ padding: '12px' }}>1.5 kg</td>
-                        </tr>
-                        <tr style={{ borderBottom: '1px solid #eee' }}>
-                            <td style={{ padding: '12px' }}>Expansión de Sangre</td>
-                            <td style={{ padding: '12px' }}>1.5 - 2.0 kg</td>
-                        </tr>
-                        <tr style={{ borderBottom: '1px solid #eee', backgroundColor: '#f9f9f9' }}>
-                            <td style={{ padding: '12px' }}>Reservas de grasa (Para lactar)</td>
-                            <td style={{ padding: '12px' }}>2.0 - 4.0 kg</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div style={{
-                marginTop: '40px',
-                padding: '25px',
-                backgroundColor: '#fff',
-                border: '1px solid #dcdde1',
-                borderRadius: '12px',
-                textAlign: 'center'
-            }}>
-                <h2 style={{ marginTop: 0, color: 'var(--color-success)' }}>Tu Herramienta Principal</h2>
-                <p>
-                    Si aún no has llenado tus datos en la página inicial o registrado tus pesos semanales, te invito a hacerlo. Basado en la curva de Atalah, la app graficará tu progreso y te indicará si tu ritmo de ganancia está apoyando correctamente tu embarazo.
-                </p>
-
-                <Link to="/" style={{
-                    display: 'inline-block',
-                    backgroundColor: 'var(--color-primary)',
-                    color: 'white',
-                    border: 'none',
-                    padding: '12px 30px',
-                    borderRadius: '30px',
-                    fontSize: '1em',
-                    fontWeight: 'bold',
-                    cursor: 'pointer',
-                    marginTop: '15px',
-                    textDecoration: 'none'
-                }}>
-                    Ir a Mi Monitoreo Gráfico
-                </Link>
-            </div>
-
+            <h3>El mensaje final</h3>
+            <p>No dejes que un número opaque el proceso. Si estás cumpliendo con tus requerimientos de proteína, carbohidratos y grasas, tu peso se acomodará donde debe estar para proteger a tu bebé. Tu cuerpo es sabio; los datos de la App solo están ahí para confirmarlo.</p>
         </div>
     );
 }

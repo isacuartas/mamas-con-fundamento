@@ -3,66 +3,61 @@ import React from 'react';
 function Chapter8() {
     return (
         <div className="chapter-content">
-            <h3 style={{ color: '#888', textTransform: 'uppercase', fontSize: '0.8em', letterSpacing: '2px', margin: '0 0 5px 0' }}>
-                Capítulo 8
-            </h3>
-            <h1 style={{ marginTop: 0 }}>El Método en la Cocina (Menú Base)</h1>
+            <h1>Capítulo 8: El Método del Plato (y la Realidad de tu Digestión)</h1>
+            <h2>"Por qué ya no te cabe lo mismo de antes"</h2>
+            <p>Si hay algo que nadie te dice es que, en el embarazo, tu sistema digestivo se vuelve otro. Esa recomendación de "comer mucha ensalada" choca de frente con la realidad: el reflujo, las agrieras y esa sensación de que la comida se quedó "atrapada" en la garganta.</p>
+            <p>En este capítulo vamos a entender por qué pasa esto y cómo ajustar tu plato para nutrirte sin terminar con malestar.</p>
 
-            <div style={{ backgroundColor: 'var(--color-bg-lavender)', padding: '20px', borderRadius: '8px', fontStyle: 'italic', marginBottom: '30px', borderLeft: '4px solid var(--color-primary)' }}>
-                "La planificación vence a los antojos."
+            <h3>1. El Sabotaje de la Progesterona y el Espacio Físico</h3>
+            <p>¿Por qué ahora todo te cae pesado? Hay dos razones técnicas:</p>
+            <ul>
+                <li><strong>La Hormona "Relajante":</strong> La progesterona relaja los músculos para que el útero no se contraiga, pero también relaja la válvula del esófago. Al quedar un poco "abierta", el ácido del estómago sube (reflujo). Además, ralentiza el movimiento de los intestinos.</li>
+                <li><strong>La Falta de Espacio:</strong> A medida que tu bebé crece, empuja tu estómago hacia arriba y lo comprime. Literalmente, tienes menos espacio físico para que la comida se acomode.</li>
+            </ul>
+
+            <div className="image-placeholder">
+                <p>[ESPACIO PARA IMAGEN: Comparativa anatómica de un estómago normal vs. un estómago comprimido por el útero en el tercer trimestre]</p>
             </div>
 
-            <p>
-                Ya vimos en el Capítulo 5 cómo estructurar el plato. Para no tener que pensar todos los días desde cero de dónde sacar la proteína o la fibra, te dejo este menú base.
-            </p>
+            <h3>2. El Dilema de la Ensalada: Volumen vs. Densidad</h3>
+            <p>Comer una montaña de vegetales crudos puede ser contraproducente si te genera gases o "saciedad precoz" (sentirte llena con tres bocados).</p>
+            <ul>
+                <li><strong>Prefiere vegetales cocidos:</strong> La fibra cruda ocupa mucho volumen. Al cocinar los vegetales (al vapor o salteados), reducimos su tamaño físico pero mantenemos sus nutrientes.</li>
+                <li><strong>No bebas mientras comes:</strong> El líquido aumenta el volumen en el estómago. Bebe agua 30 minutos antes o después de las comidas.</li>
+                <li><strong>Fracciona:</strong> Es mejor hacer 5 comidas pequeñas con mucha nutrición que 3 platos gigantes que te dejen con malestar.</li>
+            </ul>
 
-            <h2>Opciones de armado rápido:</h2>
+            <h3>3. Enzimas Digestivas Naturales: Acelerando el proceso</h3>
+            <p>A veces el problema no es el ácido, sino que la comida se queda "estancada" demasiado tiempo en el estómago, generando presión. Podemos usar la naturaleza a nuestro favor:</p>
+            <ul>
+                <li><strong>Papaya y Piña (con medida):</strong> La papaína (de la papaya) y la bromelina (de la piña) son enzimas que ayudan a romper las proteínas más rápido.</li>
+                <li><strong>El truco:</strong> Consumir una pequeña porción de estas frutas al inicio de la comida puede actuar como un "arrancador" químico, acelerando la digestión y reduciendo el tiempo que el alimento pasa en el estómago.</li>
+            </ul>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginTop: '30px' }}>
-
-                {/* Desayunos */}
-                <div style={{ border: '1px solid #eee', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
-                    <h3 style={{ color: 'var(--color-primary)', borderBottom: '1px solid #ddd', paddingBottom: '10px' }}>Desayunos (Rompe-ayunos)</h3>
-                    <ul style={{ paddingLeft: '20px', color: '#444' }}>
-                        <li style={{ marginBottom: '10px' }}><strong>Arepa poderosa:</strong> Arepa de maíz, 2 huevos revueltos con tomate/cebolla y medio aguacate.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>Avena Mágica:</strong> Avena cocida en leche (o bebida vegetal), semillas chia, 1 cucharada de mantequilla de maní y arándanos.</li>
-                        <li><strong>Pancakes proteicos:</strong> Hechos con avena, plátano, 1 huevo y acompañados de yogur griego.</li>
-                    </ul>
-                </div>
-
-                {/* Almuerzos */}
-                <div style={{ border: '1px solid #eee', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
-                    <h3 style={{ color: 'var(--color-success)', borderBottom: '1px solid #ddd', paddingBottom: '10px' }}>Almuerzos Reales</h3>
-                    <ul style={{ paddingLeft: '20px', color: '#444' }}>
-                        <li style={{ marginBottom: '10px' }}><strong>Día 1:</strong> Pechuga a la plancha, puré de batata/camote, y ensalada verde abundante con aceite de oliva.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>Semáforo Verde:</strong> Filete de salmón al horno, quinoa cocida, brócoli y calabacín asados.</li>
-                        <li><strong>Plato Latino:</strong> Carne molida guisada, casquitos de maduro al vapor, ensalada de tomate/aguacate y una cucharada de frijoles.</li>
-                    </ul>
-                </div>
-
-                {/* Cenas */}
-                <div style={{ border: '1px solid #eee', borderRadius: '12px', padding: '20px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
-                    <h3 style={{ color: '#f39c12', borderBottom: '1px solid #ddd', paddingBottom: '10px' }}>Cenas Ligeras pero Densas</h3>
-                    <ul style={{ paddingLeft: '20px', color: '#444' }}>
-                        <li style={{ marginBottom: '10px' }}><strong>Sopa reparadora:</strong> Caldo de pollo natural con verduras picadas finitas y pechuga desmechada.</li>
-                        <li style={{ marginBottom: '10px' }}><strong>Tacos fáciles:</strong> 2 tortillas de maíz rellenas de restos del pollo del almuerzo, pico de gallo y aguacate.</li>
-                        <li><strong>Ensalada potente:</strong> Hojas verdes, atún (solo 1 vez a la semana), tomates cherry, huevo cocido y vinagreta.</li>
-                    </ul>
-                </div>
-
+            <div className="image-placeholder">
+                <p>[ESPACIO PARA IMAGEN: Tabla de "Tiempos de Digestión": Comparativa visual de cuánto tarda en vaciarse un plato alto en grasas vs. uno basado en el método de densidad y enzimas naturales]</p>
             </div>
 
-            <h2 style={{ marginTop: '50px' }}>El poder de los Snacks (Y cuándo usarlos)</h2>
-            <p>
-                Muchas pacientes me preguntan cuántas veces al día deben comer. La respuesta es: come 3 comidas fuertes y estructuradas primero y, si pasan más de 5 horas entre ellas, incluye un snack.
-            </p>
+            <h3>4. Semáforo contra el Reflujo e Indigestión</h3>
+            <p>Para que la comida no se "devuelva", aplica estas reglas de oro:</p>
+            <ul>
+                <li>⚠️ <strong>Cuidado con los irritantes:</strong> Picantes, cítricos en exceso y frituras relajan aún más la válvula del esófago.</li>
+                <li>⏰ <strong>La regla de las 2 horas:</strong> Nunca te acuestes inmediatamente después de comer. Deja que la gravedad ayude a tu estómago.</li>
+                <li>🛏️ <strong>Duerme sobre tu lado izquierdo:</strong> Por la anatomía del estómago (que tiene forma de J), dormir de este lado dificulta que el ácido suba.</li>
+                <li>🌱 <strong>Ginger al rescate:</strong> El jengibre natural es el aliado número uno contra las náuseas y la digestión pesada.</li>
+            </ul>
 
-            <div style={{ backgroundColor: '#fff', padding: '20px', borderLeft: '4px solid #e74c3c', marginTop: '20px', borderRadius: '0 8px 8px 0' }}>
-                <p style={{ margin: 0 }}>
-                    <strong>El Truco Anti-Náuseas:</strong> En el primer trimestre, cuando las náuseas mandan, no intentes comer los platos gigantes. Convierte esos grandes platos en 6 mini-snacks a lo largo del día. Lo único que mejora las náuseas matutinas del embarazo es evitar que el estómago esté 100% vacío. Una galleta de avena o unas almendras en tu nochero (mesa de noche) antes de siquiera levantarte pueden salvarte la mañana.
-                </p>
+            <h3>5. El Plato Realista: ¿Cómo lo armamos?</h3>
+            <p>Si la llenura es mucha, prioriza así:</p>
+            <ol>
+                <li><strong>Primero la Proteína (25%):</strong> Es lo más importante para el bebé.</li>
+                <li><strong>Luego el Carbohidrato Compacto (25%):</strong> Arroz, papa o arepa.</li>
+                <li><strong>Al final los Vegetales Cocidos:</strong> Ocupan el espacio que sobre.</li>
+            </ol>
+
+            <div className="image-placeholder">
+                <p>[ESPACIO PARA IMAGEN: Infografía del "Plato Realista": Porciones densas pero pequeñas para mamás con poco espacio gástrico]</p>
             </div>
-
         </div>
     );
 }
