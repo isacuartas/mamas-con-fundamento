@@ -16,7 +16,7 @@ function DashboardMenu() {
       </header>
 
       <main style={{ maxWidth: '800px', margin: '40px auto', padding: '0 20px', textAlign: 'center' }}>
-        <h1 style={{ color: 'var(--color-primary)' }}>Nutrición con Fundamento: El E-book</h1>
+        <h1 style={{ color: 'var(--color-primary)' }}>Mamás con Fundamento: El E-book</h1>
         <p style={{ fontSize: '1.2em', color: '#555' }}>
           Bienvenida a tu guía definitiva. Aquí encontrarás toda la ciencia detrás de tu nutrición explicada de forma sencilla.
         </p>

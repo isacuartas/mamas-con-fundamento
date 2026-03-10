@@ -56,7 +56,7 @@ function Chapter8() {
             </ol>
 
             <div className="image-placeholder">
-                <p>[ESPACIO PARA IMAGEN: Infografía del "Plato Realista": Porciones densas pero pequeñas para mamás con poco espacio gástrico]</p>
+                <img src="/images/ebook/plate.png" alt="Plato realista para el embarazo con proteínas, carbohidratos y vegetales" className="ebook-image" />
             </div>
         </div>
     );

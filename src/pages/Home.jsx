@@ -304,7 +304,7 @@ function Home() {
                 color: 'var(--color-text-muted)'
             }}>
                 <p style={{ margin: '5px 0' }}>
-                    © {new Date().getFullYear()} <strong>Nutrición con Fundamento</strong>. Todos los derechos reservados.
+                    © {new Date().getFullYear()} <strong>Mamás con Fundamento</strong>. Todos los derechos reservados.
                 </p>
                 <p style={{ margin: '5px 0' }}>
                     Creado y Diseñado por <strong>Isabela Cuartas</strong>

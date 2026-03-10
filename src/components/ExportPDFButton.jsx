@@ -147,10 +147,9 @@ const ExportPDFButton = ({ patientData, historialMonitoreo, chartElementId }) =>
                 pdf.setTextColor(100, 100, 100);
                 pdf.text("Generado por Mamás con Fundamento App. Consulta siempre con tu profesional de la salud.", 20, footerY);
 
-                // Añadir autoría y derechos
-                pdf.setFont("helvetica", "bold");
-                pdf.text("© Nutrición con Fundamento - Creado por Isabela Cuartas. Todos los derechos reservados.", 20, footerY + 6);
-
+                // Footer de derechos de autor
+                pdf.setFontSize(8);
+                pdf.text("© Mamás con Fundamento - Creado por Isabela Cuartas. Todos los derechos reservados.", 20, footerY + 6);
             } else {
                 pdf.text("Error: No se pudo renderizar la gráfica para el reporte.", 20, 110);
             }

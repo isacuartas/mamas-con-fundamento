@@ -57,7 +57,9 @@ function Chapter9() {
                 <li><strong>Preparación:</strong> Licúa todo muy bien. Si el reflujo está presente, tómalo a sorbos muy lentos.</li>
                 <li><strong>Por qué funciona:</strong> Aquí aplicamos la sinergia química del Pilar 4. La Vitamina C de la guayaba o el kiwi "abre la puerta" para que el hierro de la espinaca entre a tu sangre con facilidad.</li>
             </ul>
-            <p className="image-placeholder">[ESPACIO PARA IMAGEN: Smoothie verde vibrante con una guayaba al lado y el texto: "Sinergia de Hierro"]</p>
+            <p className="image-placeholder">
+                <img src="/images/ebook/smoothie.png" alt="Batido Verde Saludable" className="ebook-image" />
+            </p>
 
             <hr />
 

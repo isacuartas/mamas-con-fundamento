@@ -36,7 +36,7 @@ function Chapter4() {
             </ul>
 
             <div className="image-placeholder">
-                <p>[ESPACIO PARA IMAGEN: Infografía del eje intestino-placenta-bebé y tabla de las 3 cepas clave]</p>
+                <img src="/images/ebook/microbiota.png" alt="Microbiota intestinal sana durante el embarazo" className="ebook-image" />
             </div>
 
             <h3>El mensaje final</h3>
