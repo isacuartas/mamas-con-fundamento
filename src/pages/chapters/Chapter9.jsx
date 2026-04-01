@@ -24,7 +24,9 @@ function Chapter9() {
                 <li><strong>Preparación:</strong> Mezcla todo en una taza y lleva al microondas por 1:30 o 2 min.</li>
                 <li><strong>Por qué funciona:</strong> Al ser una preparación sólida y compacta, evita el movimiento de líquidos que suele activar el reflujo matutino. Aporta una carga de proteína excelente en un volumen muy pequeño.</li>
             </ul>
-            <p className="image-placeholder">[ESPACIO PARA IMAGEN: Foto de un mugcake esponjoso con el desglose nutricional al lado: 20g Prot / 25g Carbs]</p>
+            <p className="image-placeholder">
+                <img src="/images/ebook/mugcake.png" alt="Mugcake esponjoso de avena" className="ebook-image" />
+            </p>
 
             <hr />
 
@@ -94,7 +96,9 @@ function Chapter9() {
                 <li><strong>Preparación:</strong> Procesa las lentejas remojadas con el huevo y especias. Haz pequeñas tortitas en la sartén.</li>
                 <li><strong>Por qué funciona:</strong> Las lentejas rojas aportan proteína y fibra de fácil ruptura, evitando la fermentación excesiva en el colon que causa gases y presión abdominal.</li>
             </ul>
-            <p className="image-placeholder">[ESPACIO PARA IMAGEN: Tortitas doradas acompañadas de una rodaja de aguacate]</p>
+            <p className="image-placeholder">
+                <img src="/images/ebook/tortitas.png" alt="Tortitas doradas de lenteja roja" className="ebook-image" />
+            </p>
 
             <hr />
 

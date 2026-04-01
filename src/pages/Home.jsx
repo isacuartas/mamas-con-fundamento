@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoImage from '../assets/logo_mamas.png';
 import IMCPreCalculator from '../components/IMCPreCalculator';
 import WeightGoalManager from '../components/WeightGoalManager';
 import AtalahChart from '../components/AtalahChart';
@@ -124,17 +125,18 @@ function Home() {
 
                 {/* Logo Placeholder */}
                 <div style={{
-                    width: '120px',
-                    height: '120px',
-                    borderRadius: '50%',
-                    border: '3px solid var(--color-primary)',
+                    width: '140px',
+                    height: '140px',
                     margin: '0 auto 20px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    background: 'rgba(106, 90, 205, 0.05)'
                 }}>
-                    <span style={{ color: 'var(--color-primary)', fontSize: '0.8rem', textAlign: 'center', fontWeight: 'bold' }}>Logo<br />Mamás con<br />Fundamento</span>
+                    <img 
+                        src={logoImage} 
+                        alt="Logo Mamás con Fundamento" 
+                        style={{ width: '100%', height: '100%', objectFit: 'contain', mixBlendMode: 'multiply' }}
+                    />
                 </div>
 
                 <h1 style={{ color: 'var(--color-primary)', fontSize: '1.6rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '10px' }}>
