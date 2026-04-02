@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: "AIzaSyDvzymgTIsRQRNpKJSYbDChi-BFnlHXMlg",
+  authDomain: "minsa-gestante-app.firebaseapp.com",
+  projectId: "minsa-gestante-app",
+  storageBucket: "minsa-gestante-app.firebasestorage.app",
+  messagingSenderId: "634686776924",
+  appId: "1:634686776924:web:25d2809d7d399c49c7e899"
 };
 
 const app = initializeApp(firebaseConfig);
