@@ -1,7 +1,7 @@
 import admin from 'firebase-admin';
 
 // Reemplazar saltos de línea literales por escapados para que la clave privada se analice correctamente
-const privateKey = process.env.FIREBASE_PRIVATE_KEY ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n') : '';
+const privateKey = process.env.FIREBASE_PRIVATE_KEY ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n').replace(/"/g, '') : '';
 
 if (!admin.apps.length) {
   admin.initializeApp({

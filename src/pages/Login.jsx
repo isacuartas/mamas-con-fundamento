@@ -56,7 +56,7 @@ function Login() {
 
         // Bypass especial para revisores de Hotmart y para la creadora (Isabela)
         const emailLower = email.toLowerCase();
-        if (emailLower === 'revisor@hotmart.com' || emailLower === 'isabela.cuartasr@gmail.com') {
+        if (emailLower === 'revisor@hotmart.com' || emailLower === 'isabela.cuartasr@gmail.com' || emailLower === 'isabelacuartas.r@hotmail.com') {
             localStorage.setItem('isAuthenticated', 'true');
             navigate('/book');
             return;
