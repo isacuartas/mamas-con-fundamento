@@ -32,6 +32,7 @@ function Login() {
 
                     if (docSnap.exists() && docSnap.data().hasPremiumAccess) {
                         localStorage.setItem('isAuthenticated', 'true');
+                        localStorage.setItem('isPremium', 'true');
                         navigate('/book');
                     } else {
                         // Usuario entró pero no tiene acceso premium comprado registrado
@@ -58,6 +59,7 @@ function Login() {
         const emailLower = email.toLowerCase();
         if (emailLower === 'revisor@hotmart.com' || emailLower === 'isabela.cuartasr@gmail.com' || emailLower === 'isabelacuartas.r@hotmail.com') {
             localStorage.setItem('isAuthenticated', 'true');
+            localStorage.setItem('isPremium', 'true');
             navigate('/book');
             return;
         }
@@ -144,7 +146,27 @@ function Login() {
 
                 <div style={{ marginTop: '20px', fontSize: '0.9em' }}>
                     ¿Aún no tienes el libro? <br />
-                    <a href="#" style={{ color: 'var(--color-success)', fontWeight: 'bold' }}>Adquiérelo aquí</a>
+                    <a href="https://pay.hotmart.com/V105113924C?off=pr0eg058&checkoutMode=10" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-success)', fontWeight: 'bold' }}>Adquiérelo aquí</a>
+                </div>
+
+                <div style={{ marginTop: '30px', borderTop: '1px solid #eee', paddingTop: '20px' }}>
+                    <button onClick={() => {
+                        localStorage.setItem('isAuthenticated', 'true');
+                        localStorage.setItem('isPremium', 'false');
+                        navigate('/book');
+                    }} style={{
+                        background: 'none',
+                        border: '2px solid var(--color-primary)',
+                        color: 'var(--color-primary)',
+                        padding: '10px 20px',
+                        borderRadius: '20px',
+                        fontWeight: 'bold',
+                        cursor: 'pointer',
+                        fontSize: '0.9em',
+                        transition: 'all 0.2s'
+                    }}>
+                        🎁 Probar Versión Gratuita
+                    </button>
                 </div>
             </div>
 

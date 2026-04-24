@@ -14,8 +14,12 @@ import PortionsCalculator from '../components/PortionsCalculator';
 import { getNutritionalStatusForWeek } from '../utils/atalahUtils';
 import { Link } from 'react-router-dom';
 
+import UpsellModal from '../components/UpsellModal';
+
 function Home() {
     const [activeTab, setActiveTab] = useState('hub');
+    const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+    const isPremium = localStorage.getItem('isPremium') === 'true';
 
     // Inicializar estado usando una función (se ejecuta solo al montar) en vez de useEffect para localStorage
     const [imcData, setImcData] = useState(() => {
@@ -46,6 +50,11 @@ function Home() {
 
     const handleLogWeight = (logData) => {
         if (!imcData) return;
+
+        if (!isPremium && historialMonitoreo.length >= 3) {
+            setIsUpsellOpen(true);
+            return;
+        }
 
         // Calcular IMC actual de la semana (Peso Actual / Talla de Perfil^2)
         const imcActual = logData.peso / (imcData.talla * imcData.talla);
@@ -312,6 +321,12 @@ function Home() {
                     Creado y Diseñado por <strong>Isabela Cuartas</strong>
                 </p>
             </footer>
+            
+            <UpsellModal 
+                isOpen={isUpsellOpen} 
+                onClose={() => setIsUpsellOpen(false)} 
+                message="Has registrado 3 medidas, el límite de la versión de prueba."
+            />
         </div>
     );
 }

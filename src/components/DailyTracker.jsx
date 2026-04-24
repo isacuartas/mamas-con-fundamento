@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import UpsellModal from './UpsellModal';
 
 const DailyTracker = () => {
     const [history, setHistory] = useState([]);
     const [selectedData, setSelectedData] = useState({ water: false, vitamins: false, activity: false });
     const [selectedDate, setSelectedDate] = useState('');
     const [todayDateStr, setTodayDateStr] = useState('');
+    const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+    const isPremium = localStorage.getItem('isPremium') === 'true';
 
     useEffect(() => {
         // Inicializar fecha actual localmente
@@ -32,12 +35,16 @@ const DailyTracker = () => {
     }, [selectedDate, history.length]);
 
     const handleToggle = (field) => {
-        const updatedData = { ...selectedData, [field]: !selectedData[field] };
-        setSelectedData(updatedData);
-
-        // Guardar en el historial
         let newHistory = [...history];
         const dateIndex = newHistory.findIndex(h => h.date === selectedDate);
+
+        if (!isPremium && dateIndex < 0 && history.length >= 3) {
+            setIsUpsellOpen(true);
+            return;
+        }
+
+        const updatedData = { ...selectedData, [field]: !selectedData[field] };
+        setSelectedData(updatedData);
 
         if (dateIndex >= 0) {
             newHistory[dateIndex] = { ...updatedData, date: selectedDate };
@@ -203,6 +210,12 @@ const DailyTracker = () => {
 
                 {renderCalendar()}
             </div>
+            
+            <UpsellModal 
+                isOpen={isUpsellOpen} 
+                onClose={() => setIsUpsellOpen(false)} 
+                message="Has registrado 3 días en tu calendario, el límite de la versión gratuita."
+            />
         </div>
     );
 };
