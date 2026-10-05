@@ -312,6 +312,7 @@ export default function SalesPage() {
             </blockquote>
             <div className="sp-hero-ctas">
               <BuyButton label={currentHero.ctaLabel} />
+              <Link to="/prueba" className="sp-btn-secondary">🎁 O prueba la versión gratuita primero →</Link>
             </div>
             <p className="sp-hero-note">
               {currentHero.note}
@@ -661,6 +662,9 @@ export default function SalesPage() {
               ))}
             </div>
             <BuyButton label="🛒 Quiero mi acceso ahora — $89.900 COP" />
+            <div style={{ marginTop: "16px", textAlign: "center" }}>
+              <Link to="/prueba" style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.9rem", textDecoration: "underline" }}>🎁 ¿Prefieres probar primero? Explora la versión de prueba gratis →</Link>
+            </div>
             <div className="sp-guarantee">
               🔒 Pago 100% seguro con MercadoPago · Tarjeta, PSE o efectivo
             </div>
