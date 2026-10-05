@@ -38,7 +38,7 @@ function Login() {
                     if (docSnap.exists() && docSnap.data().hasPremiumAccess) {
                         localStorage.setItem('isAuthenticated', 'true');
                         localStorage.setItem('isPremium', 'true');
-                        navigate('/book');
+                        navigate('/home');
                     } else {
                         // Usuario entró pero no tiene acceso premium comprado registrado
                         setStatusType('error');
@@ -65,7 +65,7 @@ function Login() {
         if (emailLower === 'revisor@hotmart.com' || emailLower === 'isabela.cuartasr@gmail.com' || emailLower === 'isabelacuartas.r@hotmail.com') {
             localStorage.setItem('isAuthenticated', 'true');
             localStorage.setItem('isPremium', 'true');
-            navigate('/book');
+            navigate('/home');
             return;
         }
 
@@ -158,7 +158,7 @@ function Login() {
                     <button onClick={() => {
                         localStorage.setItem('isAuthenticated', 'true');
                         localStorage.setItem('isPremium', 'false');
-                        navigate('/book');
+                        navigate('/home');
                     }} style={{
                         background: 'none',
                         border: '2px solid var(--color-primary)',

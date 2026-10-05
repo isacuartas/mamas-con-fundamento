@@ -117,7 +117,11 @@ function Home() {
             <header style={{ position: 'relative', textAlign: 'center', background: 'transparent', padding: '30px 20px', maxWidth: '800px', margin: '0 auto' }}>
                 {/* Botón Salir de la Cuenta */}
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-                    <button style={{
+                    <button onClick={() => {
+                        localStorage.removeItem('isAuthenticated');
+                        localStorage.removeItem('isPremium');
+                        window.location.href = '/login';
+                    }} style={{
                         background: 'transparent',
                         border: '1px solid var(--color-primary)',
                         color: 'var(--color-primary)',
@@ -128,7 +132,7 @@ function Home() {
                         cursor: 'pointer',
                         transition: 'all 0.3s ease'
                     }}>
-                        Salir de la Cuenta
+                        🚪 Salir de la Cuenta
                     </button>
                 </div>
 

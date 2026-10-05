@@ -10,7 +10,7 @@ import './App.css';
 const TrialRoute = () => {
   localStorage.setItem("isAuthenticated", "true");
   localStorage.setItem("isPremium", "false");
-  return <Navigate to="/book" replace />;
+  return <Navigate to="/home" replace />;
 };
 
 // Componente simple para proteger rutas
@@ -26,6 +26,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
       <Route path="/login" element={<Login />} />
       <Route path="/comprar" element={<SalesPage />} />
       <Route path="/prueba" element={<TrialRoute />} />
