@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import BookDashboard from './pages/BookDashboard';
 import Login from './pages/Login';
+import SalesPage from './pages/SalesPage';
 import './App.css';
 
 // Componente simple para proteger rutas
@@ -19,6 +20,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/comprar" element={<SalesPage />} />
       <Route path="/book/*" element={
         <ProtectedRoute>
           <BookDashboard />
