@@ -409,3 +409,133 @@ html { scroll-behavior: smooth; }
   justify-content: center;
   align-items: center;
 }
+
+
+/* ============================================================
+   MOBILE OPTIMIZATIONS (PANTALLAS MÓVILES)
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Section paddings & Container */
+  .sp-container { padding: 0 18px !important; }
+  .sp-hero { padding: 36px 16px 44px !important; }
+  .sp-problem, .sp-solution, .sp-tools, .sp-data, .sp-weight, .sp-ebook, .sp-about, .sp-testimonials, .sp-pricing, .sp-faqs, .sp-final-cta {
+    padding: 44px 16px !important;
+  }
+  
+  /* Hero adjustments */
+  .sp-hero-title {
+    font-size: 1.75rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 16px !important;
+  }
+  .sp-hero-subtitle {
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+  }
+  .sp-hero-quote {
+    font-size: 0.98rem !important;
+    padding: 10px 14px !important;
+    border-left: 3px solid var(--mcf-coral) !important;
+    border-top: none !important;
+    text-align: left !important;
+    margin-bottom: 24px !important;
+  }
+  
+  /* Hero Photo */
+  .sp-hero-media {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .sp-hero-photo {
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 20px !important;
+  }
+  .sp-hero-photo img {
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+  .sp-hero-photo-caption {
+    left: 12px !important;
+    bottom: 12px !important;
+    padding: 8px 12px !important;
+  }
+  
+  /* Primary Buy Buttons on Mobile - Crucial fix for text wrapping */
+  .sp-btn-primary {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 15px 18px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    box-sizing: border-box !important;
+  }
+  .sp-buy-btn-wrap {
+    width: 100% !important;
+  }
+  .sp-hero-ctas {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* About Isabela Image & Section */
+  .sp-about-inner {
+    gap: 32px !important;
+  }
+  .sp-about-img-wrap img {
+    border-radius: 20px !important;
+    max-height: 480px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+  }
+  .sp-about-name {
+    font-size: 1.75rem !important;
+  }
+  .sp-about-bio {
+    font-size: 0.93rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* Ebook Showcase Cards on Mobile */
+  .sp-showcase-card img {
+    height: auto !important;
+    max-height: 280px !important;
+    object-fit: contain !important;
+    background: var(--mcf-cream-2) !important;
+  }
+
+  /* Pricing Card */
+  .sp-price-card {
+    padding: 32px 18px !important;
+    border-radius: 20px !important;
+    margin-top: 28px !important;
+  }
+  .sp-price-new {
+    font-size: 2.6rem !important;
+  }
+
+  /* Weight Anatomy grid on mobile */
+  .sp-weight-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  .sp-weight-item {
+    padding: 16px 12px !important;
+  }
+  .sp-weight-item .kg {
+    font-size: 1.3rem !important;
+  }
+
+  /* Section Headings */
+  .sp-section-title {
+    font-size: 1.6rem !important;
+  }
+  .sp-section-subtitle {
+    font-size: 0.95rem !important;
+    margin-bottom: 32px !important;
+  }
+}
