@@ -12,6 +12,11 @@ function Login() {
 
     // Comprobar si llegamos a esta página haciendo clic en un Magic Link
     useEffect(() => {
+        const queryParams = new URLSearchParams(window.location.search);
+        if (queryParams.get("pago") === "exitoso") {
+            setStatusType("success");
+            setStatusText("🎉 ¡Pago aprobado con éxito! Ingresa tu correo a continuación para enviarte tu enlace de acceso directo a la plataforma.");
+        }
         if (isSignInWithEmailLink(auth, window.location.href)) {
             setStatusType('loading');
             setStatusText('Verificando tu acceso...');
@@ -37,7 +42,7 @@ function Login() {
                     } else {
                         // Usuario entró pero no tiene acceso premium comprado registrado
                         setStatusType('error');
-                        setStatusText('Ingresaste correctamente, pero no encontramos una compra activa asociada a este correo. Asegúrate de haber usado el correo con el que compraste en Hotmart.');
+                        setStatusText('Ingresaste correctamente, pero no encontramos una compra activa asociada a este correo. Asegúrate de haber usado el correo con el que realizaste la compra en Mercado Pago.');
                         auth.signOut();
                     }
                 })
@@ -101,7 +106,7 @@ function Login() {
 
                 <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                     <div style={{ textAlign: 'left' }}>
-                        <label style={{ fontWeight: 'bold', fontSize: '0.9em' }}>Correo Electrónico (El mismo de Hotmart)</label>
+                        <label style={{ fontWeight: 'bold', fontSize: '0.9em' }}>Correo Electrónico (El mismo con el que realizaste el pago)</label>
                         <input
                             type="email"
                             placeholder="tu@correo.com"

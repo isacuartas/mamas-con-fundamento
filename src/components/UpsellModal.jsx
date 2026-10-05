@@ -3,7 +3,7 @@ import React from 'react';
 function UpsellModal({ isOpen, onClose, message }) {
     if (!isOpen) return null;
 
-    const checkoutUrl = "https://pay.hotmart.com/V105113924C?off=pr0eg058&checkoutMode=10";
+    const checkoutUrl = "https://mpago.li/2VdFyVv";
 
     return (
         <div style={{
