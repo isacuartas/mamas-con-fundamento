@@ -114,6 +114,22 @@ function Home() {
 
     return (
         <div className="App">
+            {!isPremium && (
+                <div style={{
+                    background: "linear-gradient(135deg, #DB7F62, #C96444)",
+                    color: "white",
+                    padding: "12px 20px",
+                    textAlign: "center",
+                    fontSize: "0.9rem",
+                    fontWeight: "bold",
+                    boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
+                }}>
+                    🎁 Estás explorando la versión de prueba ·{" "}
+                    <Link to="/comprar" style={{ color: "white", textDecoration: "underline", marginLeft: "6px" }}>
+                        Ver Plan Completo y Comprar ($89.900 COP) →
+                    </Link>
+                </div>
+            )}
             <header style={{ position: 'relative', textAlign: 'center', background: 'transparent', padding: '30px 20px', maxWidth: '800px', margin: '0 auto' }}>
                 {/* Botón Salir de la Cuenta */}
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>

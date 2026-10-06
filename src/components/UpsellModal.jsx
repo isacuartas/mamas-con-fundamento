@@ -3,7 +3,7 @@ import React from 'react';
 function UpsellModal({ isOpen, onClose, message }) {
     if (!isOpen) return null;
 
-    const checkoutUrl = "https://mpago.li/2VdFyVv";
+    const checkoutUrl = "/comprar";
 
     return (
         <div style={{
@@ -47,7 +47,7 @@ function UpsellModal({ isOpen, onClose, message }) {
                     marginBottom: '15px',
                     boxShadow: '0 4px 15px rgba(139, 195, 74, 0.4)'
                 }}>
-                    ⭐️ Desbloquear Todo Ahora
+                    ⭐️ Ver Plan y Comprar ($89.900 COP)
                 </a>
 
                 <button onClick={onClose} style={{
